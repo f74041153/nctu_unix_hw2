@@ -184,7 +184,6 @@ int open(const char *pathname, int flags, ...) {
         va_list arg;
         va_start(arg, flags);
         mode = va_arg(arg, mode_t);
-        printf("mode: %d\n", mode);
         va_end(arg);
         rtn = _open(pathname, flags, mode);
       }
